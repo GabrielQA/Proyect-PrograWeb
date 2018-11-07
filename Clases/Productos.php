@@ -51,7 +51,7 @@ class Productos{
         //header("Location=../Vista/Productos.php?signup=char");
         exit();
     }
-    //Funcion que muestra los datos en donde se seleccione 
+    //Funcion que muestra los datos en donde se seleccione en el combobox
     public function mostrar_Productos(){
         $conexion = Conexion();
         $sql="SELECT * from tbl_productos";       

@@ -25,14 +25,14 @@
         $correo = $_POST["correo"];
         $direccion = $_POST["direccion"];
         if($username=="" or $nombre=="" or $apellido_1=="" or $apellido_2=="" or $telefono=="" or $correo=="" or $direccion==""){
-            echo"<script type=\"text/javascript\">alert('Llenar todos los campos'); window.location='../Vista/Registrarse.html';</script>";
+            echo"<script type=\"text/javascript\">alert('Llenar todos los campos'); window.location='../Vista/Registrarse.php';</script>";
         }else{
             $clase = new Personas($username,$nombre,$id,$apellido_1,$apellido_2,$telefono,$correo,$direccion);
             $clase->registrar_Persona();
         }
         }
         }else{
-            echo"<script type=\"text/javascript\">alert('Registro'); window.location='../Vista/Registrarse.html';</script>";
+            echo"<script type=\"text/javascript\">alert('Este nombre de usuario ya a sido utilizado'); window.location='../Vista/Registrarse.php';</script>";
             //"Existe por lo tanto se devuelve a registrar nuevamente";
             //echo"<script>alert('No Registrado')</script>";
             //header("Location: ../Vista/Registrarse.html");

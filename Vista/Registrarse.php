@@ -63,7 +63,7 @@
 							<div class="row align-items-center remember">
 							</div>
 							<div class="d-flex justify-content-center links">
-								Ya estas registrado?<a href="Login.html">Iniciar Sesion</a>
+								Ya estas registrado?<a href="Login.php">Iniciar Sesion</a>
 							</div>
 						</form>
 

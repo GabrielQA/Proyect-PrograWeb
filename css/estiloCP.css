@@ -31,11 +31,9 @@ form {
 }
 #table{
     width: 1000px;
-    margin: auto;
     background: rgba(25, 2, 2, 0.4);
     padding: 1px 1px;
-    box-sizing: border-box;
-    margin-top: 20px;
+    margin-top: 70px;
     border-radius: 1px;
 
 }

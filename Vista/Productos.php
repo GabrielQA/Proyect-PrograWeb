@@ -47,7 +47,6 @@ $cat = new Productos("sku","nombre","descripcion","imagen","categoria","stock","
                         <center><input type="text" id="descripcion" name="descripcion" placeholder="Descripcion producto"><br>
                         <img src="mi_archivo.png" alt="">
                         <center><input type="file" id="imagen" name="imagen" placeholder="Image producto"><br>
-                        <center><input type="text" id="categoria" name="categoria" placeholder="Categoria producto"><br>
                         <center><input type="text" id="stock" name="stock" placeholder="Stock producto"><br>
                         <center><input type="text" id="precio" name="precio" placeholder="Precio producto"><br>
                         <center><select name="nom_categoria" id="nom_categoria" ><?php echo $cat->mostrar_categorias();?></select>

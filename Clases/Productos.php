@@ -25,8 +25,6 @@ class Productos{
         $this->precio= $precio;
         $this->id= $id;
         $this->nom_categoria= $nom_categoria;
-
-
     }
 
     //Función que registra una productos al sistema y se guardara en una base de datos
@@ -49,7 +47,7 @@ class Productos{
     //Se crea una tercera varible que se utiliza tanto para  verficar, modificar, y eliminar la infomacion que se encuentre en la base de datos         
     function modificar_Productos(){
         $conexion = Conexion();
-        $sql = "UPDATE tbl_productos SET sku = '$this->sku', nombre = '$this->nombre', descripcion = '$this->descripcion', imagen = '$this->imagen', stock = '$this->stock', precio = '$this->precio',nom_categoria = '$this->nom_categoria' WHERE sku = '$this->sku';";
+        $sql = "UPDATE tbl_productos SET sku = '$this->id', nombre = '$this->nombre', descripcion = '$this->descripcion', imagen = '$this->imagen', stock = '$this->stock', precio = '$this->precio',nom_categoria = '$this->nom_categoria' WHERE sku = '$this->sku';";
         $conexion->query($sql);
         echo"<script type=\"text/javascript\">alert('producto modificado'); window.location='../Vista/Productos.php'; </script>";
         //header("Location=../Vista/Productos.php?signup=char");
@@ -66,9 +64,9 @@ class Productos{
     //Modificar solo el sku del producto
     function modificar_sku(){
         $conexion = Conexion();
-        $sql = "UPDATE tbl_productos SET sku = '$this->sku' WHERE sku = '$this->sku';";
+        $sql = "UPDATE tbl_productos SET sku = '$this->id' WHERE sku = '$this->sku';";
         $conexion->query($sql);
-        echo"<script type=\"text/javascript\">alert('Sku modificado'); window.location='../Vista/Productos.php'; </script>";
+        echo"<script type=\"text/javascript\">alert('Sku'); window.location='../Vista/Productos.php'; </script>";
         exit();
     }
     //Modificar solo el descripcion del producto
@@ -76,7 +74,7 @@ class Productos{
         $conexion = Conexion();
         $sql = "UPDATE tbl_productos SET descripcion = '$this->descripcion' WHERE sku = '$this->sku';";
         $conexion->query($sql);
-        echo"<script type=\"text/javascript\">alert('Descripcion modificado'); window.location='../Vista/Productos.php'; </script>";
+        echo"<script type=\"text/javascript\">alert('Descripcion '); window.location='../Vista/Productos.php'; </script>";
         exit();
     }
     //Modificar solo el imagen del producto
@@ -84,7 +82,7 @@ class Productos{
         $conexion = Conexion();
         $sql = "UPDATE tbl_productos SET imagen = '$this->imagen' WHERE sku = '$this->sku';";
         $conexion->query($sql);
-        echo"<script type=\"text/javascript\">alert('Imagen modificado'); window.location='../Vista/Productos.php'; </script>";
+        echo"<script type=\"text/javascript\">alert('Imagen'); window.location='../Vista/Productos.php'; </script>";
         exit();
     }
     //Modificar solo el sstock del producto
@@ -92,7 +90,7 @@ class Productos{
         $conexion = Conexion();
         $sql = "UPDATE tbl_productos SET stock = '$this->stock' WHERE sku = '$this->sku';";
         $conexion->query($sql);
-        echo"<script type=\"text/javascript\">alert('Stock modificado'); window.location='../Vista/Productos.php'; </script>";
+        echo"<script type=\"text/javascript\">alert('Stock'); window.location='../Vista/Productos.php'; </script>";
         exit();
     }
     //Modificar solo el precio del producto
@@ -100,7 +98,7 @@ class Productos{
         $conexion = Conexion();
         $sql = "UPDATE tbl_productos SET   precio = '$this->precio' WHERE sku = '$this->sku';";
         $conexion->query($sql);
-        echo"<script type=\"text/javascript\">alert('Precio modificado'); window.location='../Vista/Productos.php'; </script>";
+        echo"<script type=\"text/javascript\">alert('Precio'); window.location='../Vista/Productos.php'; </script>";
         exit();
     }
     //Modificar solo la categoria del producto
@@ -108,7 +106,7 @@ class Productos{
         $conexion = Conexion();
         $sql = "UPDATE tbl_productos SET nom_categoria = '$this->nom_categoria' WHERE sku = '$this->sku';";
         $conexion->query($sql);
-        echo"<script type=\"text/javascript\">alert('categoria asociada modificada'); window.location='../Vista/Productos.php'; </script>";
+        echo"<script type=\"text/javascript\">alert('Categoria modificada'); window.location='../Vista/Productos.php'; </script>";
         exit();
     }             
     //<-------------MOSTRAR---------->
